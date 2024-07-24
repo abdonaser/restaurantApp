@@ -9,7 +9,7 @@
 
 .signContainer {
     /* background-color: teal; */
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 80%;
     height: 100%;
 }
@@ -132,9 +132,9 @@
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
 
-    &:hover {
+    /* &:hover {
         transform: rotateY(180deg);
-    }
+    } */
 
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 
@@ -184,5 +184,24 @@
 }
 
 .inputPadding {
-    padding: 10px 30px !important;
+    padding: 10px 35px !important;
+}
+
+
+.LogBtnColor {
+    background-color: #FF0000 !important;
+}
+
+
+.cursorPointer {
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        color: #FF0000 !important;
+    }
+}
+
+.handelcreate {
+    font-size: 18px;
 }

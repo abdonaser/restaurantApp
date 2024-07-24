@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import log from "../Styles/Login.module.css";
 
 const Login = () => {
+  const [hasAccount, sethasAccount] = useState(true);
+  const handelCreateAcc = (e) => {
+    sethasAccount(false);
+  };
+  const handelSignIn = () => {
+    sethasAccount(true);
+  };
   return (
     <>
       <div className={log.SignComp + " container  "}>
@@ -20,8 +27,10 @@ const Login = () => {
           <div className={log.RightSection + " col-md-6 "}>
             <div className={log.rightContainer}>
               <div className={log.mainContainer + ``}>
-                <div className={log.theCard}>
-                  {/* Login Card */}
+                <div
+                  className={log.theCard}
+                  style={!hasAccount ? { transform: "rotateY(180deg)" } : null}>
+                  {/*  //! =================================================Login Card============================================ */}
                   <div className={log.theFront}>
                     <h1 className="text-danger">Happy Delivery</h1>
                     <h2>Login</h2>
@@ -56,32 +65,41 @@ const Login = () => {
                           placeholder="Password"
                         />
                       </div>
-
+                      {/* //'Forgot Password? */}
                       <div className="text-end text-danger">
                         <a href="#">Forgot Password?</a>
                       </div>
 
+                      {/* //'Login Btn */}
                       <button
                         type="submit"
-                        className="btn btn-danger w-100 my-2">
+                        className={
+                          log.LogBtnColor + " btn btn-danger w-100 my-2"
+                        }>
                         Login
                       </button>
-                      <div className="text-center mb-2">
+
+                      {/* //'create One */}
+                      <div
+                        className={log.handelcreate + " text-center mb-2 p-2"}>
                         Don't have an Account?
-                        <a href="#" className="text-danger ms-2">
+                        <a
+                          className={log.cursorPointer + "  ms-2"}
+                          onClick={handelCreateAcc}>
                           create one
                         </a>
                       </div>
                     </form>
                   </div>
-                  {/* Register Card */}
+                  {/* //! =================================================Register Card============================================ */}
                   <div className={log.theBack}>
                     <h1 className="text-danger">Happy Delivery</h1>
                     <h2>Register</h2>
                     <form action="" className=" my-3 py-2">
                       {/* //'USer Name */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-user"}></i>
+                        <i
+                          class={log.inputIcon + " fa-solid fa-signature "}></i>
                         <input
                           className={
                             log.inputPadding +
@@ -96,10 +114,7 @@ const Login = () => {
 
                       {/* //'USer phone */}
                       <div className={log.inputContainer + " "}>
-                        <i
-                          class={
-                            log.inputIcon + " fa-solid fa-unlock-keyhole"
-                          }></i>
+                        <i class={log.inputIcon + " fa-solid fa-phone"}></i>
                         <input
                           className={
                             log.inputPadding + " form-control text-start  mb-1"
@@ -110,10 +125,9 @@ const Login = () => {
                           placeholder="Phone"
                         />
                       </div>
-
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-user"}></i>
+                        <i class={log.inputIcon + " fa-solid fa-at"}></i>
                         <input
                           className={
                             log.inputPadding +
@@ -145,12 +159,17 @@ const Login = () => {
 
                       <button
                         type="submit"
-                        className="btn btn-danger w-100 my-2">
+                        className={
+                          log.LogBtnColor + " btn btn-danger w-100 my-2"
+                        }>
                         SignUp
                       </button>
-                      <div className="text-center mb-2">
+                      <div
+                        className={log.handelcreate + " text-center mb-2 p-2"}>
                         Alreaady has Account?
-                        <a href="#" className="text-danger ms-2">
+                        <a
+                          className={log.cursorPointer + " ms-2"}
+                          onClick={handelSignIn}>
                           Sign In
                         </a>
                       </div>
