@@ -62,7 +62,7 @@ const Login = () => {
 
                       <button
                         type="submit"
-                        className="btn btn-danger w-100 my-2">
+                        className={log.LogBtnColor +" btn btn-danger w-100 my-2"}>
                         Login
                       </button>
                       <div className="text-center mb-2">
@@ -80,7 +80,8 @@ const Login = () => {
                     <form action="" className=" my-3 py-2">
                       {/* //'USer Name */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-user"}></i>
+                        <i
+                          class={log.inputIcon + " fa-solid fa-signature "}></i>
                         <input
                           className={
                             log.inputPadding +
@@ -92,13 +93,10 @@ const Login = () => {
                           placeholder="User Name"
                         />
                       </div>
-
+                     
                       {/* //'USer phone */}
                       <div className={log.inputContainer + " "}>
-                        <i
-                          class={
-                            log.inputIcon + " fa-solid fa-unlock-keyhole"
-                          }></i>
+                        <i class={log.inputIcon + " fa-solid fa-phone"}></i>
                         <input
                           className={
                             log.inputPadding + " form-control text-start  mb-1"
@@ -109,10 +107,9 @@ const Login = () => {
                           placeholder="Phone"
                         />
                       </div>
-
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-user"}></i>
+                        <i class={log.inputIcon + " fa-solid fa-at"}></i>
                         <input
                           className={
                             log.inputPadding +
@@ -144,12 +141,12 @@ const Login = () => {
 
                       <button
                         type="submit"
-                        className="btn btn-danger w-100 my-2">
+                        className={log.LogBtnColor +" btn btn-danger w-100 my-2"}>
                         SignUp
                       </button>
                       <div className="text-center mb-2">
                         Alreaady has Account?
-                        <a href="#" className="text-danger ms-2">
+                        <a href="#" className="ms-2">
                           Sign In
                         </a>
                       </div>
