@@ -221,8 +221,8 @@ const Login = () => {
                         Alreaady has Account?
                         <a
                           className={log.cursorPointer + " ms-2"}
-                          onClick={handleSignUp}>
-                          Sign In
+                          onClick={handelSignIn}>
+                          SignIn
                         </a>
                       </div>
                     </form>
