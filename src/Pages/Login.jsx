@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import log from "../Styles/Login.module.css";
 
 const Login = () => {
+  //'==================================handel Flip Cards
   const [hasAccount, sethasAccount] = useState(true);
   const handelCreateAcc = (e) => {
     sethasAccount(false);
@@ -9,12 +10,23 @@ const Login = () => {
   const handelSignIn = () => {
     sethasAccount(true);
   };
+  //'==============================================================================================
+
+  //'==================================login stats
+
+  //'===============================================
+
+  //'==================================signup stats
+
+  //'==============================================================================================
+
   return (
     <>
       <div className={log.SignComp + " container  "}>
-        <div className={log.signContainer + " row gx-2"}>
-          <div className={log.LeftSection + " col-md-6 p-2"}>
-            <div className={"inner  w-100 h-100"}>
+        <div className={log.signContainer + " row "}>
+          {/* //'=======================================================Left Section */}
+          <div className={log.LeftSection + "  col-12 col-lg-6 p-2  "}>
+            <div className={" inner "}>
               <div className={log.Boxs}>
                 <div className={log.mealBoxParant}>
                   <div className={log.singleBox1}></div>
@@ -24,17 +36,18 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <div className={log.RightSection + " col-md-6 "}>
+          {/* //'=======================================================right Section */}
+          <div className={log.RightSection + " col-12 col-lg-6 "}>
             <div className={log.rightContainer}>
               <div className={log.mainContainer + ``}>
                 <div
                   className={log.theCard}
                   style={!hasAccount ? { transform: "rotateY(180deg)" } : null}>
-                  {/*  //! =================================================Login Card============================================ */}
+                  {/*  //!  ================Login Card================  */}
                   <div className={log.theFront}>
-                    <h1 className="text-danger">Happy Delivery</h1>
+                    <h1 className="text-danger">Restaurant App</h1>
                     <h2>Login</h2>
-                    <form action="" className=" my-3 py-2">
+                    <form action="" className=" my-3 py-1">
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
                         <i class={log.inputIcon + " fa-solid fa-user"}></i>
@@ -66,8 +79,8 @@ const Login = () => {
                         />
                       </div>
                       {/* //'Forgot Password? */}
-                      <div className="text-end text-danger">
-                        <a href="#">Forgot Password?</a>
+                      <div className=" text-end text-danger">
+                        <a className={log.redHover}>Forgot Password?</a>
                       </div>
 
                       {/* //'Login Btn */}
@@ -91,11 +104,11 @@ const Login = () => {
                       </div>
                     </form>
                   </div>
-                  {/* //! =================================================Register Card============================================ */}
+                  {/* //! ================  Register Card================  */}
                   <div className={log.theBack}>
-                    <h1 className="text-danger">Happy Delivery</h1>
+                    <h1 className="text-danger">Restaurant App</h1>
                     <h2>Register</h2>
-                    <form action="" className=" my-3 py-2">
+                    <form action="" className=" my-3 py-1">
                       {/* //'USer Name */}
                       <div className={log.inputContainer + " "}>
                         <i
