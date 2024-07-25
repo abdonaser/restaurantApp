@@ -11,13 +11,38 @@ const Login = () => {
     sethasAccount(true);
   };
   //'==============================================================================================
-
   //'==================================login stats
-
+  const [userLogInfo, setUserLogInfo] = useState({
+    userEmailLogIn: "",
+    userPasswordLogIn: "",
+  });
+  const handleLogInfoChange = (event) => {
+    setUserLogInfo((oldObj) => {
+      return { ...oldObj, [event.target.name]: event.target.value };
+    });
+  };
+  const handeleLoginSubmit = (e) => {
+    e.preventDefault();
+    console.log(userLogInfo);
+  };
   //'===============================================
 
   //'==================================signup stats
-
+  const [userSignUpInfo, setSignUpInfo] = useState({
+    userName: "",
+    userPhone: "",
+    userEmail: "",
+    userPassword: "",
+  });
+  const handleSignUp = (event) => {
+    setSignUpInfo((oldObj) => {
+      return { ...oldObj, [event.target.name]: event.target.value };
+    });
+  };
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+    console.log(userSignUpInfo);
+  };
   //'==============================================================================================
 
   return (
@@ -47,25 +72,27 @@ const Login = () => {
                   <div className={log.theFront}>
                     <h1 className="text-danger">Restaurant App</h1>
                     <h2>Login</h2>
-                    <form action="" className=" my-3 py-1">
+                    <form onSubmit={handeleLoginSubmit} className=" my-3 py-1">
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-user"}></i>
+                        <i className={log.inputIcon + " fa-solid fa-user"}></i>
                         <input
                           className={
                             log.inputPadding +
                             " form-control text-start   mb-4 "
                           }
                           type="email"
-                          name="userEmail"
-                          id="userEmail"
+                          name="userEmailLogIn"
+                          id="userEmailLogIn"
                           placeholder="Email/Phone no"
+                          value={userLogInfo.userEmail}
+                          onChange={handleLogInfoChange}
                         />
                       </div>
                       {/* //'user password */}
                       <div className={log.inputContainer + " "}>
                         <i
-                          class={
+                          className={
                             log.inputIcon + " fa-solid fa-unlock-keyhole"
                           }></i>
                         <input
@@ -73,9 +100,11 @@ const Login = () => {
                             log.inputPadding + " form-control text-start  mb-3"
                           }
                           type="password"
-                          name="userPassword"
-                          id="userPassword"
+                          name="userPasswordLogIn"
+                          id="userPasswordLogIn"
                           placeholder="Password"
+                          value={userLogInfo.userPassword}
+                          onChange={handleLogInfoChange}
                         />
                       </div>
                       {/* //'Forgot Password? */}
@@ -108,11 +137,13 @@ const Login = () => {
                   <div className={log.theBack}>
                     <h1 className="text-danger">Restaurant App</h1>
                     <h2>Register</h2>
-                    <form action="" className=" my-3 py-1">
+                    <form onSubmit={handleSignUpSubmit} className=" my-3 py-1">
                       {/* //'USer Name */}
                       <div className={log.inputContainer + " "}>
                         <i
-                          class={log.inputIcon + " fa-solid fa-signature "}></i>
+                          className={
+                            log.inputIcon + " fa-solid fa-signature "
+                          }></i>
                         <input
                           className={
                             log.inputPadding +
@@ -122,12 +153,14 @@ const Login = () => {
                           name="userName"
                           id="userName"
                           placeholder="User Name"
+                          value={userSignUpInfo.userName}
+                          onChange={handleSignUp}
                         />
                       </div>
 
                       {/* //'USer phone */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-phone"}></i>
+                        <i className={log.inputIcon + " fa-solid fa-phone"}></i>
                         <input
                           className={
                             log.inputPadding + " form-control text-start  mb-1"
@@ -136,11 +169,13 @@ const Login = () => {
                           name="userPhone"
                           id="userPhone"
                           placeholder="Phone"
+                          value={userSignUpInfo.userPhone}
+                          onChange={handleSignUp}
                         />
                       </div>
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
-                        <i class={log.inputIcon + " fa-solid fa-at"}></i>
+                        <i className={log.inputIcon + " fa-solid fa-at"}></i>
                         <input
                           className={
                             log.inputPadding +
@@ -150,13 +185,15 @@ const Login = () => {
                           name="userEmail"
                           id="userEmail"
                           placeholder="Email/Phone no"
+                          value={userSignUpInfo.userEmail}
+                          onChange={handleSignUp}
                         />
                       </div>
 
                       {/* //'USer password */}
                       <div className={log.inputContainer + " "}>
                         <i
-                          class={
+                          className={
                             log.inputIcon + " fa-solid fa-unlock-keyhole"
                           }></i>
                         <input
@@ -167,6 +204,8 @@ const Login = () => {
                           name="userPassword"
                           id="userPassword"
                           placeholder="Password"
+                          value={userSignUpInfo.userPassword}
+                          onChange={handleSignUp}
                         />
                       </div>
 
@@ -182,7 +221,7 @@ const Login = () => {
                         Alreaady has Account?
                         <a
                           className={log.cursorPointer + " ms-2"}
-                          onClick={handelSignIn}>
+                          onClick={handleSignUp}>
                           Sign In
                         </a>
                       </div>
