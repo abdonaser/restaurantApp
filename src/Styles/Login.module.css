@@ -1,5 +1,4 @@
 .SignComp {
-    /* background-color: teal; */
     height: 100vh;
     padding: 5px;
     display: flex;
@@ -9,11 +8,8 @@
 }
 
 .signContainer {
-    /* background-color: orange; */
-    /* border: 1px solid; */
     width: 80%;
     padding: 10px;
-    /* margin: auto; */
     height: 100%;
 
 }
@@ -21,19 +17,17 @@
 /* //' ================================================== left Section */
 .LeftSection {
     height: 100%;
-    /* background-color: rgb(105, 255, 5); */
 }
 
 .LeftSection>div {
     width: 100%;
     height: 100%;
-    background-color: #FF0000;
+    background-color: var(--main-bg-color);
     position: relative;
     border-radius: 45px;
 }
 
 .Boxs {
-    /* background-color: rgb(7, 11, 245); */
     width: 50%;
     height: 50%;
     position: absolute;
@@ -47,62 +41,54 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: solid 1px #333;
-    background-color: blanchedalmond;
     background-image: url('Images/LogPageImage/meal-2.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.singleBox1,
+.singleBox2,
+.singleBox3 {
+    border: 4px solid var(--main-border-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999;
+    box-shadow: var(--box-shadow);
+}
+
 .singleBox1 {
     position: absolute;
-    background-color: #c5afaf;
-    border: 3px solid #fff;
     top: 10%;
     left: -60%;
     width: 75%;
     height: 35%;
     background-image: url('Images/LogPageImage/meal-1.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 .singleBox2 {
-    /* background-color: #c5afaf; */
-    border: 3px solid #fff;
     position: relative;
     top: -25%;
     left: 40%;
     width: 75%;
     height: 50%;
     background-image: url('Images/LogPageImage/meal-4.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 999;
 }
 
 
 .singleBox3 {
-    border: 3px solid #fff;
     position: absolute;
     bottom: -20%;
     left: 20%;
     width: 95%;
     height: 45%;
     background-image: url('Images/LogPageImage/meal-3.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 999;
 }
 
 /* //' ================================================== right Section */
 .RightSection {
-    /* background-color: rgb(51, 41, 22); */
     position: relative;
     height: 100%;
 }
@@ -110,13 +96,10 @@
 .rightContainer {
     width: 90%;
     height: 80%;
-    /* background-color: rgb(145, 202, 71); */
     position: absolute;
     left: -20px;
     top: 50%;
     transform: translateY(-50%);
-    /* overflow: hidden; */
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 
@@ -124,23 +107,14 @@
     position: relative;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(211, 80, 80); */
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    /* background-color: black !important; */
 }
 
 .theCard {
-    /* position: absolute; */
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
 
-    /* &:hover {
-        transform: rotateY(180deg);
-    } */
-
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 
 }
 
@@ -149,10 +123,9 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: #fff;
-    color: #333;
+    background: var(--white-bg);
     padding: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: var(--box-shadow);
     border-radius: 45px;
 
 }
@@ -162,26 +135,21 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: #fff;
-    color: #333;
+    background: var(--white-bg);
     transform: rotateY(180deg);
     padding: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: var(--box-shadow);
     border-radius: 45px;
 
 }
 
 .inputContainer {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: relative;
 }
 
 .inputIcon {
     position: absolute;
     font-size: 18px;
-    /* background-color: red; */
     top: 50%;
     transform: translateY(-50%);
     left: 8px;
@@ -193,16 +161,17 @@
 
 
 .LogBtnColor {
-    background-color: #FF0000 !important;
+    background-color: var(--main-color) !important;
 }
 
 
 .cursorPointer {
     cursor: pointer;
     transition: all 0.5s;
-font-weight: bold;
+    font-weight: bold;
+
     &:hover {
-        color: #FF0000 !important;
+        color: var(--main-color) !important;
     }
 }
 
@@ -212,7 +181,7 @@ font-weight: bold;
     font-weight: bold;
 
     &:hover {
-        color: #FF0000 !important;
+        color: var(--main-color) !important;
     }
 }
 
