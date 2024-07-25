@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import "../../Styles/Contact.css"
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css"
-=======
-import "./Contact.css";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.css"
->>>>>>> e52543274b83f957c0cf086ce10ec8e7d12049eb
 
 export default function Contact() {
   return (
