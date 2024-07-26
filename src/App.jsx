@@ -5,19 +5,20 @@ import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import HomeModule from "./Pages/HomeModule";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomeModule></HomeModule>,
+      element: <HomeModule></HomeModule> ,errorElement: <ErrorPage/>,
       children: [
-        { index:true, element: <Home/> },
-        { path: "about", element: <About/> },
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
         { path: "contact", element: <Contact /> },
       ],
     },
-    { path: "login", element: <Login></Login> },
+    { path: "login", element: <Login></Login>, errorElement: <ErrorPage/> },
   ]);
 
   return <RouterProvider router={router}></RouterProvider>;
