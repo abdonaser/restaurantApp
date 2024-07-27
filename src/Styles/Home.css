@@ -1,3 +1,10 @@
+body {
+  background-image: linear-gradient(rgba(255, 199, 142, 0.11), rgba(163, 163, 157, 0.5)),
+    url(../../public/Images/HomePage/wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /*? VerticalImageSlider */
 .slider-container {
   width: 100%;
@@ -97,11 +104,12 @@
   font-size: 3rem;
   color: #ff5b00;
   margin-bottom: 60px;
+  position: relative;
 }
 .menu-title::before {
   content: "";
   position: absolute;
-  left: -30px;
+  left: 30px;
   top: 50%;
   width: 5px;
   height: 80%;
@@ -135,7 +143,7 @@
 }
 
 .menu-icon {
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 8px;
   border: 2px solid #f0a500;
   border-radius: 50%;
@@ -147,7 +155,8 @@
 }
 
 .menu-label {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .menu-item.active .menu-icon {
@@ -174,13 +183,14 @@
 
 .trusted-brands,
 .why-we-are-best {
-  margin-bottom: 90px;
+  margin-bottom: 190px;
 }
 
 .trusted-brands h2,
 .why-we-are-best h2 {
   font-size: 3rem;
   color: #ff5b00;
+  margin-top: 60px;
   margin-bottom: 60px;
   text-align: center;
   position: relative;
@@ -266,14 +276,16 @@
 .customer-review-heading {
   font-size: 3rem;
   color: #ff5b00;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+
   text-align: center;
   text-transform: capitalize;
+  position: relative;
 }
 .customer-review-heading::before {
   content: "";
   position: absolute;
-  left: -30px;
+  left: 30px;
   top: 50%;
   width: 5px;
   height: 80%;
@@ -285,6 +297,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  margin-top: 1px;
 }
 
 .review-image {
