@@ -5,6 +5,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+::selection {
+  color: #F8EDED;
+  background: #FF8225;
+}
 /*? VerticalImageSlider */
 .slider-container {
   width: 100%;

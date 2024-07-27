@@ -40,16 +40,17 @@
 .cart-item button {
   padding: 5px 10px;
   border: none;
-  width: 30%;
+  width: 40%;
   border-radius: 5px;
-  background-color: #ff5b00;
+  background-color: hsl(3, 63%, 60%);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 15px;
 }
 
 .cart-item button:hover {
-  background-color: #e04a00;
+  background-color: hsl(3, 63%, 50%);
 }
 
 .cart-total {
@@ -66,14 +67,14 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #ff5b00;
+  background-color: hsl(0, 48%, 48%);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .clear-cart-button:hover {
-  background-color: #e04a00;
+  background-color: hsl(0, 48%, 38%);
 }
 
 .empty-cart-message {

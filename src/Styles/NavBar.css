@@ -81,7 +81,7 @@ body {
 }
 
 .page-header .nav-links a {
-  color: #fff;
+  color: #173B45;
   font-size: 16px;
   transition: color 0.3s, padding-bottom 0.3s;
   padding-bottom: 5px;
@@ -160,7 +160,7 @@ body {
 }
 
 .page-header .profile-menu li a {
-  color: #333;
+  color: #F8EDED;
   transition: color 0.3s;
 }
 
@@ -183,7 +183,7 @@ body {
   border-radius: 20px;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: #F8EDED;
   background: #ff5b00;
   transition: background 0.3s, transform 0.3s;
   margin: 0 10px;
