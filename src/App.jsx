@@ -8,6 +8,7 @@ import HomeModule from "./Pages/HomeModule";
 import ErrorPage from "./Pages/ErrorPage";
 import Loader from "./Components/Loader";
 import { useEffect, useState } from "react";
+import MenuPage from "./Pages/MenuPage";
 
 function App() {
   //! I will Remove the Loader from this Component, i just put here to Test it.....
@@ -28,6 +29,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "contact", element: <Contact /> },
+        { path: "menu", element: <MenuPage /> },
       ],
     },
     { path: "login", element: <Login />, errorElement: <ErrorPage /> },
