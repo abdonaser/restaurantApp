@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../Styles/Home.css";
 
 const menuItems = [
@@ -9,8 +9,14 @@ const menuItems = [
   { label: "Drinks", icon: "🥤" },
 ];
 
-const HomeCategories = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const HomeCategories = ({ setSelectedCuisine }) => {
+  const initialIndex = menuItems.findIndex((item) => item.label === "Burger");
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
+
+  const handleCategoryClick = (index, label) => {
+    setActiveIndex(index);
+    setSelectedCuisine(label);
+  };
 
   return (
     <div className="menu-container">
@@ -20,7 +26,7 @@ const HomeCategories = () => {
           <div
             key={index}
             className={`menu-item ${index === activeIndex ? "active" : ""}`}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => handleCategoryClick(index, item.label)}
           >
             <div className="menu-icon">{item.icon}</div>
             <div className="menu-label">{item.label}</div>
@@ -30,4 +36,5 @@ const HomeCategories = () => {
     </div>
   );
 };
+
 export default HomeCategories;
