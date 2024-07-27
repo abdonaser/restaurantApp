@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../Styles/HomeCard.css";
-import { setSelectedRestaurant } from '../redux/actions';
+import { setSelectedRestaurant } from "../redux/actions";
 
 function RestaurantCard({ restaurant }) {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ function RestaurantCard({ restaurant }) {
 
   const handleShowMenu = () => {
     dispatch(setSelectedRestaurant(restaurant));
-    navigate('/menu');
+    navigate(`/restaurant/${restaurant.id}`); // Navigate using ID
   };
 
   return (

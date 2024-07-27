@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 import MenuPage from "./Pages/MenuPage";
 
 function App() {
-  //! I will Remove the Loader from this Component, i just put here to Test it.....
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ function App() {
       setLoading(false);
     }, 1000);
   }, []);
-  ////////////////////////////////////////////////////////!This Part will be Removed by ME
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -29,7 +28,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "contact", element: <Contact /> },
-        { path: "menu", element: <MenuPage /> },
+        { path: "restaurant/:id", element: <MenuPage /> },
       ],
     },
     { path: "login", element: <Login />, errorElement: <ErrorPage /> },
