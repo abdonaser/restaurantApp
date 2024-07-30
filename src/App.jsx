@@ -6,7 +6,6 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import HomeModule from "./Pages/HomeModule";
 
-
 import UserInfo from "./Pages/UserInfo";
 import AccountInfo from "./Components/UserInfo/AccountInfo";
 import UserOrders from "./Components/UserInfo/UserOrders";
@@ -14,8 +13,6 @@ import SavedAddress from "./Components/UserInfo/SavedAddress";
 import ErrorPage from "./Pages/ErrorPage";
 import Loader from "./Components/Loader";
 import { useEffect, useState } from "react";
-
-
 
 function App() {
   //! I will Remove the Loader from this Component, i just put here to Test it.....
@@ -26,7 +23,7 @@ function App() {
       setLoading(false);
     }, 1000);
   }, []);
-////////////////////////////////////////////////////////!This Part will be Removed by ME
+  ////////////////////////////////////////////////////////!This Part will be Removed by ME
   const router = createBrowserRouter([
     {
       path: "/",
@@ -49,13 +46,13 @@ function App() {
         { path: "userOrders", element: <UserOrders></UserOrders> },
       ],
     },
-  
+
     { path: "login", element: <Login />, errorElement: <ErrorPage /> },
   ]);
 
   // ]);
   // return <RouterProvider router={router}></RouterProvider>;
-  
+
   return <>{loading ? <Loader /> : <RouterProvider router={router} />}</>;
 }
 

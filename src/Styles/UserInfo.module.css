@@ -1,45 +1,41 @@
+@import url("Variables.css");
+
 .head {
     margin: 5px 25px;
-    /* background-color: black; */
     padding: 15px 0;
-    border-bottom: 1px solid #979393bb;
+    border-bottom: 1px solid var(--main-color);
 }
 
-.userInfo {
-    /* background-color: red; */
-    padding: 10px 0;
-    width: 100%;
-    height: 100vh;
+.container {
     display: flex;
-    gap: 10px;
-    /* background-color: teal; */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
 }
+
+
 
 
 /* '========================== leftAside =============*/
-.leftAside {
-    /* background-color: antiquewhite; */
-    width: 20%;
-    border-right: 1px solid #979393bb;
+.leftSection {
+    width: 25%;
+    position: sticky;
+    height: 100% !important;
+    top: 65px;
+    bottom: 0;
+
 }
 
-.leftAside ul {
-    /* background-color: teal; */
+.leftSection ul {
     padding: 10px;
 }
 
 .listItem {
-    /* background-color: aliceblue; */
     padding: 15px;
     margin-bottom: 15px;
     font-size: 20px;
-
     cursor: pointer;
 }
-
-/* .listItem a:focus  {
-    border-left: 2px red solid;
-} */
 
 .active {
     border-left: 2px red solid !important;
@@ -49,19 +45,19 @@
     }
 }
 
-
 /* //'===========================' */
 .rightSection {
-    background-color: antiquewhite;
     width: 75%;
-    padding-top: 15px;
+    padding: 20px 15px;
+    border-left: 1px solid var(--main-color);
 }
 
+
+/* //'========= Account-Info ==========' */
 .userDetials {
     padding: 10px 15px;
     width: 75%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     margin-bottom: 15px;
 
@@ -73,7 +69,8 @@
 }
 
 .Input {
-    width: 55%;
+    width: 65%;
+    margin-left: auto;
 
     & input {
         padding: 10px;
@@ -81,15 +78,15 @@
 }
 
 .InputGender {
-    background-color: aliceblue;
-    width: 55%;
+    width: 65%;
+    margin-left: auto;
     display: flex;
     align-items: center;
 }
 
 .male {
     width: 50%;
-    background-color: orange ;
+    background-color: orange;
     cursor: pointer;
     margin-right: 5px;
 }
@@ -100,9 +97,47 @@
     background-color: orange;
 }
 
-
 .genderActive {
     background-color: red !important;
     color: red;
     cursor: pointer;
+}
+
+/* //!========= USerOrders ============================================' */
+.orderCart {
+    box-shadow: var(--box-shadow);
+}
+
+.resName {
+    border-bottom: 2px solid var(--main-color);
+    padding:10px 15px !important;
+    border-bottom-left-radius: 20px;
+}
+
+.cardItem {
+    width: 90%;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+.itemImageContainer {
+    width: 23%;
+    height: 100px;
+    background-color: aqua;
+}
+
+.itemImageContainer img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.itemDetails {
+    background-color: #FFF;
+    padding: 5px 20px !important;
+
+}
+
+.itemPrice {
+    color: var(--main-color);
 }

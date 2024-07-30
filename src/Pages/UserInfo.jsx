@@ -3,7 +3,9 @@ import userInfo from "../Styles/UserInfo.module.css";
 import AccountInfo from "../Components/UserInfo/AccountInfo";
 
 import { Link, Outlet } from "react-router-dom";
+
 import Navbar from "../Components/NavBar";
+
 // className={userInfo.userInfo + " "}
 const UserInfo = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,11 +14,10 @@ const UserInfo = () => {
     <>
       <Navbar />
       <h1 className={userInfo.head + " mt-5 pt-5"}>My Account</h1>
-      <div className={userInfo.userInfo + " mainSection "}>
-        <div className={userInfo.leftAside + "  "}>
+      <div className={userInfo.container + " "}>
+        <div className={userInfo.leftSection + "  "}>
           <ul>
             <Link to={"/profile/accountInfo"}>
-              {" "}
               <li
                 className={
                   userInfo.listItem +
@@ -46,6 +47,7 @@ const UserInfo = () => {
                 My Orders
               </li>
             </Link>
+
             {/* <li
               className={
                 userInfo.listItem +
@@ -56,7 +58,8 @@ const UserInfo = () => {
             </li> */}
           </ul>
         </div>
-        <div className={userInfo.rightSection + "  "}>
+
+        <div className={userInfo.rightSection + "   "}>
           <Outlet />
         </div>
       </div>

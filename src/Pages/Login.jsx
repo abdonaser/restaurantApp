@@ -124,7 +124,7 @@ const Login = () => {
                       {/* //'create One */}
                       <div
                         className={log.handelcreate + " text-center mb-2 p-2"}>
-                        Don't have an Account?
+                        Don't have an account? 
                         <a
                           className={log.cursorPointer + "  ms-2"}
                           onClick={handelCreateAcc}>
@@ -218,11 +218,11 @@ const Login = () => {
                       </button>
                       <div
                         className={log.handelcreate + " text-center mb-2 p-2"}>
-                        Alreaady has Account?
+                        Already have an account ?
                         <a
                           className={log.cursorPointer + " ms-2"}
                           onClick={handelSignIn}>
-                          SignIn
+                          Login
                         </a>
                       </div>
                     </form>
