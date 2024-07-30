@@ -98,6 +98,7 @@
   color: #ff5b00;
   margin-bottom: 60px;
 }
+
 .menu-title::before {
   content: "";
   position: absolute;
@@ -156,12 +157,13 @@
 }
 
 .menu-item.active .menu-label {
-  color: orange;
+  /* color: orange; */
+  color: teal;
 }
 
-.menu-item.active .menu-label {
+/* .menu-item.active .menu-label {
   color: orange;
-}
+} */
 
 /*?TrustedBrandsAndWhy */
 
@@ -270,6 +272,7 @@
   text-align: center;
   text-transform: capitalize;
 }
+
 .customer-review-heading::before {
   content: "";
   position: absolute;
@@ -280,6 +283,7 @@
   background-color: orange;
   transform: translateY(-50%);
 }
+
 .customer-review {
   display: flex;
   align-items: center;

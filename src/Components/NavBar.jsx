@@ -28,7 +28,11 @@ function Navbar() {
     <header className={`page-header ${isSticky ? "is-sticky" : ""}`}>
       <nav>
         <Link to="/" className="logo">
-          <img src="public/Images/LogPageImage/hero-img.png" alt="logo" width={"50px"} />
+          <img
+            src="/Images/LogPageImage/hero-img.png"
+            alt="logo"
+            width={"50px"}
+          />
         </Link>
         <div className="nav-items">
           <ul className="nav-links">

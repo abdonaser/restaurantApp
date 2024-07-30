@@ -1,26 +1,4 @@
 :root {
-<<<<<<< HEAD
-  --f-color: #ff5b00;
-  --s-color: #399918;
-  --th-color: #777;
-  --p-color: hsl(0, 0%, 50%);
-  --body-bg-color: #fefefe;
-  --card-bg-color: #fff;
-  --modal-bg-color: #fff;
-  --line-color: #d7d7d7;
-  --color-filter: invert(1);
-  box-shadow: 0, 0, 20px rgb(0 0 0 /10%);
-  --small-size: 0.9em;
-  --normal--size: 1em;
-}
-
-p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--color-primary3);
-  font-weight: 300;
-}
-=======
     /* //' Public Styles ========================*/
     --f-color: #FF5B00;
     --s-color: #399918;
@@ -54,4 +32,3 @@ p {
     color: var(--color-primary3);
     font-weight: 300;
 } */
->>>>>>> e52543274b83f957c0cf086ce10ec8e7d12049eb

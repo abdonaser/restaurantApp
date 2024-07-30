@@ -19,7 +19,7 @@ const HomeCategories = () => {
         {menuItems.map((item, index) => (
           <div
             key={index}
-            className={`menu-item ${index === activeIndex ? "active" : ""}`}
+            className={`menu-item  ${index === activeIndex ? "active" : ""}`}
             onClick={() => setActiveIndex(index)}
           >
             <div className="menu-icon">{item.icon}</div>

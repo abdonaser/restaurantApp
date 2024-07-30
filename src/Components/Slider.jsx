@@ -32,7 +32,7 @@ const VerticalImageSlider = () => {
   }, []);
 
   return (
-    <div className="slider-container">
+    <div className="slider-container vh-100">
       <div
         className="slider-wrapper"
         style={{ transform: `translateY(-${currentIndex * 100}%)` }}

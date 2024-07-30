@@ -1,0 +1,108 @@
+.head {
+    margin: 5px 25px;
+    /* background-color: black; */
+    padding: 15px 0;
+    border-bottom: 1px solid #979393bb;
+}
+
+.userInfo {
+    /* background-color: red; */
+    padding: 10px 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    /* background-color: teal; */
+}
+
+
+/* '========================== leftAside =============*/
+.leftAside {
+    /* background-color: antiquewhite; */
+    width: 20%;
+    border-right: 1px solid #979393bb;
+}
+
+.leftAside ul {
+    /* background-color: teal; */
+    padding: 10px;
+}
+
+.listItem {
+    /* background-color: aliceblue; */
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+/* .listItem a:focus  {
+    border-left: 2px red solid;
+} */
+
+.active {
+    border-left: 2px red solid !important;
+
+    & a {
+        color: red !important;
+    }
+}
+
+
+/* //'===========================' */
+.rightSection {
+    background-color: antiquewhite;
+    width: 75%;
+    padding-top: 15px;
+}
+
+.userDetials {
+    padding: 10px 15px;
+    width: 75%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.lable {
+    width: 30%;
+    font-size: 22px;
+}
+
+.Input {
+    width: 55%;
+
+    & input {
+        padding: 10px;
+    }
+}
+
+.InputGender {
+    background-color: aliceblue;
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.male {
+    width: 50%;
+    background-color: orange ;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.female {
+    width: 50%;
+    cursor: pointer;
+    background-color: orange;
+}
+
+
+.genderActive {
+    background-color: red !important;
+    color: red;
+    cursor: pointer;
+}
