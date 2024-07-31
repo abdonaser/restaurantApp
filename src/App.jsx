@@ -13,6 +13,8 @@ import SavedAddress from "./Components/UserInfo/SavedAddress";
 import ErrorPage from "./Pages/ErrorPage";
 import Loader from "./Components/Loader";
 import { useEffect, useState } from "react";
+import { Provider } from "react-redux";
+import Store from "./Redux/Store";
 
 function App() {
   //! I will Remove the Loader from this Component, i just put here to Test it.....
@@ -53,7 +55,13 @@ function App() {
   // ]);
   // return <RouterProvider router={router}></RouterProvider>;
 
-  return <>{loading ? <Loader /> : <RouterProvider router={router} />}</>;
+  return (
+    <>
+      <Provider store={Store}>
+        {loading ? <Loader /> : <RouterProvider router={router} />}
+      </Provider>
+    </>
+  );
 }
 
 export default App;

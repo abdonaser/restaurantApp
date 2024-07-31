@@ -1,7 +1,23 @@
 import React, { useState } from "react";
 import log from "../Styles/Login.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { updateInfo } from "../Redux/Slices/UserInfo";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  //!===========================================Start Receive Data
+
+  const userInforamtion = useSelector((state) => {
+    return state.userInfoStore.userInfo;
+  });
+
+  // console.log(userInforamtion);
+
+  //!===========================================End
+  //' email  /  firstName / LastName / gender /   Date Of Birth
+
   //'==================================handel Flip Cards
   const [hasAccount, sethasAccount] = useState(true);
   const handelCreateAcc = (e) => {
@@ -31,7 +47,9 @@ const Login = () => {
   const [userSignUpInfo, setSignUpInfo] = useState({
     userName: "",
     userPhone: "",
+    gender: "",
     userEmail: "",
+    dateOfBirth: "",
     userPassword: "",
   });
   const handleSignUp = (event) => {
@@ -39,9 +57,13 @@ const Login = () => {
       return { ...oldObj, [event.target.name]: event.target.value };
     });
   };
+
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    console.log(userSignUpInfo);
+    console.log("userSignUpInfo ", userSignUpInfo);
+    navigate("/profile");
+    dispatch(updateInfo(userSignUpInfo));
+    console.log(userInforamtion);
   };
   //'==============================================================================================
 
@@ -124,7 +146,7 @@ const Login = () => {
                       {/* //'create One */}
                       <div
                         className={log.handelcreate + " text-center mb-2 p-2"}>
-                        Don't have an account? 
+                        Don't have an account?
                         <a
                           className={log.cursorPointer + "  ms-2"}
                           onClick={handelCreateAcc}>
@@ -173,6 +195,85 @@ const Login = () => {
                           onChange={handleSignUp}
                         />
                       </div>
+
+                      {/* //' user gender */}
+
+                      <div
+                        className={
+                          log.inputContainer +
+                          " d-flex align-items-center justify-content-between pe-2"
+                        }>
+                        <label htmlFor="gender" className=" fw-medium ">
+                          Gender :
+                        </label>
+                        <div className=" d-flex justify-content-around p-2 gap-5">
+                          <div>
+                            <input
+                              className={
+                                log.inputPadding +
+                                " " +
+                                log.pointer +
+                                "  text-start  m-2"
+                              }
+                              type="radio"
+                              name="gender"
+                              id="Female"
+                              value="female"
+                              checked={userSignUpInfo.gender === "female"}
+                              onChange={handleSignUp}
+                            />
+                            <label
+                              htmlFor="Female"
+                              className={log.pointer + " "}>
+                              Female
+                            </label>
+                          </div>
+                          <div>
+                            <input
+                              className={
+                                log.inputPadding +
+                                " " +
+                                log.pointer +
+                                "  text-start   m-2 "
+                              }
+                              type="radio"
+                              name="gender"
+                              id="male"
+                              value="male"
+                              checked={userSignUpInfo.gender === "male"}
+                              onChange={handleSignUp}
+                            />
+                            <label htmlFor="male" className={log.pointer + " "}>
+                              male
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* //' user Birth Date */}
+
+                      <div
+                        className={
+                          log.birthDate +
+                          " userDateBirth my-2 d-flex align-items-center justify-content-between"
+                        }>
+                        <div className={log.birthLabel + "  "}>
+                          <label htmlFor="dateOfBirth" className=" fw-medium  ">
+                            Date Of Birth :
+                          </label>
+                        </div>
+                        <div className={log.birthInput + "  "}>
+                          <input
+                            type="date"
+                            name="dateOfBirth"
+                            id="dateOfBirth"
+                            className="form-control"
+                            value={userSignUpInfo.dateOfBirth}
+                            onChange={handleSignUp}
+                          />
+                        </div>
+                      </div>
+
                       {/* //' user Email */}
                       <div className={log.inputContainer + " "}>
                         <i className={log.inputIcon + " fa-solid fa-at"}></i>
@@ -216,6 +317,7 @@ const Login = () => {
                         }>
                         SignUp
                       </button>
+
                       <div
                         className={log.handelcreate + " text-center mb-2 p-2"}>
                         Already have an account ?

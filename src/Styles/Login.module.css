@@ -91,11 +91,13 @@
 .RightSection {
     position: relative;
     height: 100%;
+    background-color: aqua;
 }
 
 .rightContainer {
+    overflow: hidden;
     width: 90%;
-    height: 80%;
+    height: 95%;
     position: absolute;
     left: -20px;
     top: 50%;
@@ -107,6 +109,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+
 }
 
 .theCard {
@@ -124,7 +127,7 @@
     height: 100%;
     backface-visibility: hidden;
     background: var(--white-bg);
-    padding: 30px;
+    padding: 35px;
     box-shadow: var(--box-shadow);
     border-radius: 45px;
 
@@ -137,7 +140,7 @@
     backface-visibility: hidden;
     background: var(--white-bg);
     transform: rotateY(180deg);
-    padding: 30px;
+    padding: 25px;
     box-shadow: var(--box-shadow);
     border-radius: 45px;
 
@@ -145,6 +148,7 @@
 
 .inputContainer {
     position: relative;
+
 }
 
 .inputIcon {
@@ -211,4 +215,22 @@
     .handelcreate {
         font-size: 15px;
     }
+}
+
+
+
+
+/* //'regiter */
+
+
+.birthLabel {
+    width: 35% !important;
+}
+
+.birthInput {
+    width: 65% !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
