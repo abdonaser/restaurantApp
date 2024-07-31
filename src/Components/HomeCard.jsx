@@ -12,7 +12,6 @@ function RestaurantCard({ restaurant }) {
     dispatch(setSelectedRestaurant(restaurant));
     navigate(`/restaurant/${restaurant.id}`); // Navigate using ID
   };
-
   return (
     <div className="restaurant-card">
       <img

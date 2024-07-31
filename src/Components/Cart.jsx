@@ -32,6 +32,7 @@ const Cart = () => {
       }, 0)
       .toFixed(2);
   };
+
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
@@ -48,10 +49,11 @@ const Cart = () => {
                   <div className="quantity-controls">
                     <p onClick={() => handleDecrease(item.id)}>-</p>
                     <p onClick={() => handleIncrease(item.id)}>+</p>
-                    <button onClick={() => handleRemove(item.id)}>Remove</button>
+                    <button onClick={() => handleRemove(item.id)} >
+                      Remove
+                    </button>
                   </div>
                 </div>
-             
               </li>
             ))}
           </ul>

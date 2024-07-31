@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import RestaurantCard from './HomeCard';
-import Loader from './Loader'; 
-import '../Styles/Home.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import RestaurantCard from "./HomeCard";
+import Loader from "./Loader";
+import "../Styles/Home.css";
 
 const RestaurantList = ({ selectedCuisine }) => {
   const [restaurants, setRestaurants] = useState([]);
@@ -12,7 +12,7 @@ const RestaurantList = ({ selectedCuisine }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/restaurants');
+        const response = await axios.get("http://localhost:3000/restaurants");
         setRestaurants(response.data);
       } catch (err) {
         setError(err);
@@ -24,7 +24,9 @@ const RestaurantList = ({ selectedCuisine }) => {
   }, []);
 
   const filteredRestaurants = selectedCuisine
-    ? restaurants.filter((restaurant) => restaurant.serverCuisine === selectedCuisine)
+    ? restaurants.filter(
+        (restaurant) => restaurant.serverCuisine === selectedCuisine
+      )
     : restaurants;
 
   if (loading) return <Loader />;

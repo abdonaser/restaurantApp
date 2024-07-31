@@ -73,7 +73,6 @@ const MenuPage = () => {
     // Ensure restaurantId is passed with the item
     dispatch(addToCart({ ...item, restaurantId: restaurantDetails.id }, 1));
   };
-
   return (
     <div className="menu-page-container">
       {restaurantDetails && (
@@ -93,7 +92,6 @@ const MenuPage = () => {
         <div className="menu-page-categories">
           <h2>Categories</h2>
           <ul>
-            {/* Add your categories here */}
             <li>Category 1</li>
             <li>Category 2</li>
             <li>Category 3</li>
@@ -106,7 +104,6 @@ const MenuPage = () => {
               {menu.map((item) => (
                 <li key={item.id} className="menu-page-item">
                   {" "}
-                  {/* Use a unique key */}
                   <img
                     src={item.image}
                     alt={item.name}

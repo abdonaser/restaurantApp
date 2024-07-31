@@ -102,6 +102,10 @@
   color: #e04a00;
 }
 
+.quantity-controls button{
+  margin-top: 10px;
+  height: fit-content;
+}
 /* .container-of-price-q-dec-inc {
   display: flex;
   flex-direction: column;

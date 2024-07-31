@@ -7,7 +7,7 @@ import CustomerReview from "../Components/CustomerReviews";
 import RestaurantList from "../Components/resList";
 
 const Home = () => {
-  const [selectedCuisine, setSelectedCuisine] = useState("Burger"); 
+  const [selectedCuisine, setSelectedCuisine] = useState("Burger");
 
   return (
     <>
